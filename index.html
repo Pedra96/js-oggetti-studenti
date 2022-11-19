@@ -11,20 +11,20 @@
     <title>Oggetti studenti</title>
 </head>
 <header>
-    <nav class="navbar p4">
+    <nav class="navbar blackColor">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="img/Yasogami_Logo.webp" alt="Logo image" width="88" height="66">
-            <span class="">Yasogami highschool</span>
+            <img src="img/Yasogami_Logo.webp" alt="Logo image" width=10% height=10%>
+            <span class="textcolor fs-2">Yasogami Highschool</span>
           </a>  
         </div>
       </nav>
 </header>
 
-<body>
-    <h1 class="text-center textcolor mt-1">Yasogami highschool</h1>
-    <p class="text-center textcolor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, aperiam explicabo? Autem sunt reiciendis eligendi porro beatae aliquid fuga, tenetur atque omnis non maxime quasi quam quidem itaque explicabo! Asperiores.</p>
-    <form action="" onsubmit="addStudent(event)" class="container d-flex justify-content-center border p4 border-dark mb-4">
+<body class="p4">
+    <h1 class="text-center mt-1">Yasogami Highschool</h1>
+    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, aperiam explicabo? Autem sunt reiciendis eligendi porro beatae aliquid fuga, tenetur atque omnis non maxime quasi quam quidem itaque explicabo! Asperiores.</p>
+    <form action="" onsubmit="addStudent(event)" class="container d-flex justify-content-center bg-dark">
 
         <div class="row mt-3">
             <div class="col-3 mb-3">
@@ -39,13 +39,13 @@
                 <input type="number" id="etaUtente" class="form-control" placeholder="Età Studente"
                     aria-label="Età Studente" required>
             </div>
-            <div class="col-6 mb-3">
+            <div class="col-11 mb-3 d-flex justify-content-end">
                 <button type="submit" class="customButton">Add student</button>
             </div>
         </div>
 
     </form>
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center blackColor pt-3">
         <div class="row gx-5"id="studenteContainer">
 
         </div>
