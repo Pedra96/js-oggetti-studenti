@@ -31,6 +31,9 @@ let arrayStudenti=[{
 }
 ]
 
+html_init_();
+
+
 for(let attributi in studente){
     console.log(attributi + ": "+studente[attributi]);
 }
@@ -58,7 +61,46 @@ for(arrayStudenti.length;arrayStudenti.length<numeroDiStudenti;){
      arrayStudenti.push(studente);
 }console.log(arrayStudenti);
 
+
+ function html_init_(){
+    for (let student of arrayStudenti) {
+        document.getElementById("studenteContainer").innerHTML += `
+        <div class="col col-md-6 col-lg-4">
+        <div class="card border-0 mb-5">
+        <img src="img/wayne-barnett-founder-ceo.jpg" alt="Student picture">
+        <div class="card-body">
+        <p class="fs-5 m-0">
+        Nome: ${student.nome} <br>
+        Cognome: ${student.cognome}</p>
+        <p class="card-text">Età: ${student.eta}</p>
+        `
+    }
+ }
 function addStudent(event){
     event.preventDefault();
-    console.log(arrayStudenti[0]);
+    nomeStudente=document.getElementById("nomeUtente").value;
+    cognomeStudente=document.getElementById("cognomeUtente").value;
+    etaStudente=document.getElementById("etaUtente").value;
+    studente={
+        nome: nomeStudente,
+        cognome:cognomeStudente,
+        eta: etaStudente
+    }
+    arrayStudenti.push(studente);
+    addStudentToScreen(studente);
+    console.log(arrayStudenti);
+}
+
+
+function addStudentToScreen(student){
+    document.getElementById("studenteContainer").innerHTML += `
+    <div class="col col-md-6 col-lg-4">
+    <div class="card border-0 mb-5">
+    <img src="img/wayne-barnett-founder-ceo.jpg" alt="Student picture">
+    <div class="card-body">
+    <p class="fs-5 m-0">
+    Nome: ${student.nome} <br>
+    Cognome: ${student.cognome}</p>
+    <p class="card-text">Età: ${student.eta}</p>
+    `
 }

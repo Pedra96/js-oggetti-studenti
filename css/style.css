@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(69, 69, 69);
+}
+.p4{
+    background-color:#FFE600
+}
+.textcolor{
+    color: rgb(243, 243, 230);
+}
+.customButton{
+    background-color:rgb(17, 17, 17);
+    color:white;
+    border-radius:7%;
+    
+}
